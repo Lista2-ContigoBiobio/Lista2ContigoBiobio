@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista Contigo Biobío! — Partido Republicano · Elecciones Internas 2026</title>
+<meta name="description" content="Directiva Regional y Cabildo Regional del Partido Republicano en el Biobío. Elecciones internas 9 de agosto de 2026.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+  :root{
+    /* paleta tomada del sitio oficial partidorepublicano.cl */
+    --navy:#1a1449;
+    --blue:#28466d;
+    --blue-light:#0076ce;
+    --blue-dark:#032642;
+    --red:#bd1218;
+    --red-2:#b11025;
+    --gray:#5f6b82;
+    --off-white:#f5f5f5;
+    --white:#ffffff;
+    --ink:#1a1449;
+    --muted:#5f6b82;
+    --border:rgba(255,255,255,0.14);
+    --alt-font:'Barlow Condensed',sans-serif;
+    --primary-font:'Manrope',sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--primary-font);
+    color:var(--ink);
+    background:var(--off-white);
+    font-size:17px;
+    line-height:1.65;
+  }
+  h1,h2,h3,h4{
+    font-family:var(--alt-font);
+    margin:0 0 .4em 0;
+    font-weight:700;
+    line-height:1.05;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  .pill{
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    font-family:var(--alt-font);
+    font-size:.82rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    font-weight:700;
+    padding:9px 20px;
+    border-radius:40px;
+  }
+
+  /* ===== HEADER / HERO ===== */
+  header.hero{
+    background:
+      radial-gradient(ellipse at 20% -10%, rgba(0,118,206,.30), transparent 55%),
+      linear-gradient(180deg, var(--blue-dark) 0%, var(--navy) 60%, var(--blue) 100%);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    padding-bottom:0;
+  }
+  .hero-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 24px 10px;
+    max-width:1140px;
+    margin:0 auto;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .hero-top img.pr-logo{height:52px;width:auto;}
+  .hero-content{
+    text-align:center;
+    padding:28px 24px 0;
+    max-width:920px;
+    margin:0 auto;
+  }
+  .hero-eyebrow{
+    font-family:var(--alt-font);
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:.9rem;
+    font-weight:600;
+    color:#cdd6ea;
+    margin-bottom:20px;
+  }
+  .hero-content img.wordmark{
+    max-width:600px;
+    width:82%;
+    margin:0 auto 20px;
+  }
+  .hero-sub{
+    font-family:var(--alt-font);
+    font-weight:600;
+    letter-spacing:.02em;
+    font-size:1.3rem;
+    color:#e7ebf5;
+    margin-bottom:10px;
+  }
+  .hero-tag{
+    font-family:var(--alt-font);
+    font-size:3rem;
+    line-height:1em;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:-.01em;
+    color:#fff;
+    margin:16px 0 10px;
+  }
+  .hero-lista{
+    font-family:var(--alt-font);
+    font-size:2.6rem;
+    line-height:1em;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:-.01em;
+    color:#fff;
+    margin:0 0 26px;
+  }
+  nav.subnav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px 4px;
+    padding:16px 24px 22px;
+    border-top:1px solid var(--border);
+    margin-top:10px;
+    max-width:1140px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  nav.subnav a{
+    text-decoration:none;
+    color:#dfe4f2;
+    font-family:var(--alt-font);
+    text-transform:uppercase;
+    font-weight:600;
+    font-size:.92rem;
+    letter-spacing:.04em;
+    padding:8px 14px;
+    border-radius:4px;
+    transition:background .15s;
+  }
+  nav.subnav a:hover{background:rgba(255,255,255,.08);}
+  .hero-cutout{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:6px;
+  }
+  .hero-cutout img{
+    width:100%;
+    max-width:900px;
+    object-fit:contain;
+  }
+
+  /* ===== SECTION GENERIC ===== */
+  section{padding:80px 0;}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 50px;}
+  .section-eyebrow{
+    color:var(--red);
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-family:var(--alt-font);
+    font-size:1.05rem;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .section-head h2{
+    font-size:3.25rem;
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing:-.01em;
+    color:var(--navy);
+  }
+  .section-head p{color:var(--muted);font-size:1.05rem;}
+  .rule{
+    width:64px;height:4px;background:var(--red);
+    margin:18px auto 0;
+  }
+
+  /* ===== PRESENTACION ===== */
+  #presentacion{background:#fff;}
+  .presentacion-text{
+    max-width:760px;margin:0 auto;
+    font-size:1.1rem;color:#2b2f3a;
+  }
+  .presentacion-text p{margin-bottom:1.2em;text-align:justify;}
+  .presentacion-text p:first-child::first-letter{
+    font-family:var(--alt-font);
+    font-size:3.4rem;
+    font-weight:800;
+    color:var(--red);
+    float:left;
+    line-height:.8;
+    padding-right:10px;
+  }
+
+  /* ===== EJES ===== */
+  #ejes{background:var(--off-white);}
+  .ejes-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+  .eje{
+    background:#fff;
+    border:1px solid #e7e3da;
+    border-radius:8px;
+    padding:30px 32px;
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+    box-shadow:0 1px 3px rgba(20,20,30,.04);
+  }
+  .eje-num{
+    font-family:var(--alt-font);
+    font-size:2.75rem;
+    font-weight:800;
+    color:var(--red);
+    opacity:.9;
+    line-height:1;
+    min-width:60px;
+  }
+  .eje-body h3{
+    font-family:var(--alt-font);
+    font-size:1.65rem;
+    font-weight:700;
+    color:var(--navy);
+    margin-bottom:8px;
+    line-height:1.15;
+  }
+  .eje-objetivo{
+    font-family:var(--primary-font);
+    font-style:italic;
+    color:var(--muted);
+    margin-bottom:14px;
+    font-size:1rem;
+    text-align:justify;
+  }
+  .eje-label{
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-family:var(--alt-font);
+    font-size:.85rem;
+    font-weight:700;
+    color:var(--blue-light);
+    margin:0 0 8px;
+  }
+  .eje-list{margin:0;padding-left:20px;color:#333;font-size:.98rem;text-align:justify;}
+  .eje-list li{margin-bottom:6px;}
+
+  /* ===== COMPROMISO QUOTE ===== */
+  #compromiso{
+    background:linear-gradient(180deg,var(--navy),var(--blue));
+    color:#fff;
+    text-align:center;
+  }
+  #compromiso .wrap{max-width:860px;}
+  #compromiso p.lead{
+    font-family:var(--alt-font);
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-weight:700;
+    font-size:1rem;
+    color:#dbe1ee;
+    margin-bottom:28px;
+  }
+  #compromiso blockquote{
+    font-family:var(--alt-font);
+    font-weight:600;
+    font-size:2rem;
+    line-height:1.3;
+    margin:0;
+    color:#fff;
+    position:relative;
+  }
+  #compromiso blockquote::before,
+  #compromiso blockquote::after{
+    content:'"';
+    color:#ff6b6b;
+  }
+
+  /* ===== DIRECTIVA REGIONAL ===== */
+  #directiva{background:#fff;}
+  .directiva-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+    max-width:960px;
+    margin:0 auto;
+  }
+  .dir-card{
+    text-align:center;
+  }
+  .dir-card img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:center 20%;
+    border-radius:8px;
+    margin-bottom:14px;
+    box-shadow:0 8px 20px rgba(18,29,51,.14);
+    background:var(--off-white);
+  }
+  .dir-name{
+    font-family:var(--alt-font);
+    font-weight:700;
+    font-size:1.15rem;
+    color:var(--navy);
+    margin-bottom:4px;
+  }
+  .dir-role{
+    color:var(--red);
+    font-family:var(--alt-font);
+    font-size:.85rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    font-weight:700;
+  }
+  .directiva-meta{
+    text-align:center;
+    margin-top:34px;
+    color:var(--muted);
+    font-size:.95rem;
+  }
+  .directiva-meta .pill{margin-top:12px;}
+
+  /* ===== CONSEJERA ===== */
+  #consejera{
+    background:var(--off-white);
+  }
+  .consejera-box{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:44px;
+    align-items:center;
+    max-width:920px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:8px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(20,20,30,.06);
+  }
+  .consejera-box img{
+    border-radius:6px;
+    width:100%;
+  }
+  .consejera-role{
+    color:var(--red);
+    text-transform:uppercase;
+    font-family:var(--alt-font);
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    margin-bottom:8px;
+  }
+  .consejera-box h3{
+    font-size:2.4rem;
+    font-weight:800;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin-bottom:10px;
+  }
+  .consejera-bio{color:#333;margin-bottom:16px;font-size:1rem;text-align:justify;}
+  .consejera-quote{
+    font-family:var(--alt-font);
+    font-weight:600;
+    font-size:1.35rem;
+    color:var(--blue);
+    border-left:4px solid var(--red);
+    padding-left:16px;
+    margin:18px 0 0;
+  }
+
+  /* ===== EQUIPO ===== */
+  #equipo{background:#fff;text-align:center;}
+  #equipo img{
+    max-width:760px;margin:0 auto;
+    border-radius:8px;
+  }
+  #equipo .caption{
+    max-width:560px;margin:24px auto 0;
+    color:var(--muted);font-size:.98rem;
+  }
+
+  /* ===== CONTACTO ===== */
+  #contacto{
+    background:linear-gradient(180deg,var(--blue),var(--navy));
+    color:#fff;
+  }
+  #contacto .section-head h2{color:#fff;}
+  #contacto .section-head p{color:#cfd6e6;}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    max-width:700px;
+    margin:0 auto;
+  }
+  .contact-grid .full{grid-column:1/-1;}
+  .contact-grid label{
+    display:block;
+    font-family:var(--alt-font);
+    font-size:.82rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    font-weight:600;
+    color:#c7cfe1;
+    margin-bottom:6px;
+  }
+  .contact-grid input,
+  .contact-grid select,
+  .contact-grid textarea{
+    width:100%;
+    padding:11px 12px;
+    border-radius:4px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.06);
+    color:#fff;
+    font-size:.95rem;
+    font-family:var(--primary-font);
+  }
+  .contact-grid select option{color:#111;}
+  .contact-grid textarea{resize:vertical;min-height:100px;}
+  .contact-grid input::placeholder,
+  .contact-grid textarea::placeholder{color:#aab2c6;}
+  .btn-submit{
+    background:var(--red);
+    color:#fff;
+    border:2px solid transparent;
+    padding:13px 30px;
+    border-radius:4px;
+    font-family:var(--alt-font);
+    font-weight:700;
+    font-size:.9rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    cursor:pointer;
+    margin-top:6px;
+  }
+  .btn-submit:hover{background:var(--red-2);}
+  .contact-alt{
+    text-align:center;
+    margin-top:38px;
+    padding-top:28px;
+    border-top:1px solid var(--border);
+  }
+  .contact-alt a{
+    display:inline-block;
+    margin:0 8px;
+    text-decoration:none;
+    color:#fff;
+    font-family:var(--alt-font);
+    text-transform:uppercase;
+    font-weight:600;
+    letter-spacing:.04em;
+    border:1px solid rgba(255,255,255,.35);
+    padding:10px 20px;
+    border-radius:4px;
+    font-size:.85rem;
+  }
+  .contact-alt a:hover{background:rgba(255,255,255,.08);}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--blue-dark);
+    color:#c9d0e0;
+    padding:48px 0 26px;
+    text-align:center;
+    font-size:.88rem;
+  }
+  footer img.foot-logo{height:40px;margin:0 auto 16px;}
+  footer div:nth-of-type(1){
+    font-family:var(--alt-font);
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:.04em;
+    font-size:1.05rem;
+  }
+  footer .comunas{
+    font-family:var(--alt-font);
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-weight:600;
+    font-size:.78rem;
+    color:#8f9ab3;
+    margin:10px 0;
+  }
+  footer .fine{color:#6d7791;margin-top:20px;font-size:.78rem;}
+
+  @media (max-width:720px){
+    .consejera-box{grid-template-columns:1fr;text-align:center;padding:26px;}
+    .consejera-box img{max-width:220px;margin:0 auto;}
+    .consejera-quote{text-align:left;}
+    .contact-grid{grid-template-columns:1fr;}
+    .hero-content img.wordmark{width:92%;}
+    .hero-tag{font-size:1.9rem;}
+    .section-head h2{font-size:2.1rem;}
+    .consejera-box h3{font-size:1.8rem;}
+    .eje{flex-direction:column;}
+    .eje-body h3{font-size:1.35rem;}
+    .directiva-cards{grid-template-columns:repeat(2,1fr);}
+    section{padding:56px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <img class="pr-logo" src="logo_pr_blanco.svg" alt="Partido Republicano">
+    <span class="pill">Elecciones internas · 9 de agosto 2026</span>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Concepción · Arauco · Biobío</div>
+    <img class="wordmark" src="logo_contigo.webp" alt="Lista Contigo Biobío!">
+    <div class="hero-tag">¡Contigo empieza el cambio!</div>
+    <div class="hero-lista">Lista 2</div>
+  </div>
+  <nav class="subnav">
+    <a href="#presentacion">Presentación</a>
+    <a href="#presidente">Presidente</a>
+    <a href="#directiva">Directiva Regional</a>
+    <a href="#ejes">Ejes de Trabajo</a>
+    <a href="#compromiso">Compromiso</a>
+    <a href="#consejera">Cabildo Regional</a>
+    <a href="#equipo">Equipo Completo</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <div class="hero-cutout">
+    <img src="directiva_cutout.webp" alt="Directiva Regional Lista Contigo Biobío">
+  </div>
+</header>
+
+<section id="presentacion">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Presentación</div>
+      <h2>Una conducción cercana y unida</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="presentacion-text">
+      <p>La presente propuesta nace desde un diagnóstico crudo de la actual situación del Partido Republicano en nuestra Región y de nuestra profunda convicción de que una conducción cercana, participativa, transparente y conectada con la militancia, es lo que el Partido necesita, tal como nos lo ha señalado el espíritu de Jaime Guzmán y el liderazgo de José Antonio Kast.</p>
+      <p>Creemos firmemente que el Partido Republicano requiere una Directiva Regional que una, que termine con los conflictos, que esté abierta al diálogo, y que con presencia activa en las 33 comunas se comprometa con los principios partidarios por sobre los intereses personales o de grupos reducidos.</p>
+      <p>Finalmente nuestro compromiso es construir una región políticamente fortalecida, unida y preparada para enfrentar los desafíos futuros con organización, trabajo y sentido de Comunidad.</p>
+    </div>
+  </div>
+</section>
+
+<section id="presidente">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Elecciones Internas 2026</div>
+      <h2>Presidente</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="consejera-box">
+      <img src="renato.jpg" alt="Renato Navarro Genta">
+      <div>
+        <div class="consejera-role">Presidente Regional · Biobío</div>
+        <h3>Renato Navarro Genta</h3>
+        <p class="consejera-bio">Desde el año 2019 he sido activo miembro fundador de Acción Republicana y luego del Partido Republicano. Ustedes me conocen y saben de mi trayectoria y espíritu de sacrificio en aras de nuestro Partido.</p>
+        <p class="consejera-bio">Oficial de Marina en retiro, Práctico de Puerto y 2 veces Jefe de Campaña de José Antonio Kast en el Gran Concepción, y hoy aspiro a presidir nuestro Partido en la Región buscando incorporar más militantes, formarlos y darles oportunidades a los mejores para liderar y servir a Chile en los distintos cargos políticos.</p>
+        <p class="consejera-quote">"Si me lo permiten, lideraré el Partido Republicano en el Biobío buscando servir a Chile, practicar la probidad y la excelencia!"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="directiva">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Tus representantes</div>
+      <h2>Directiva Regional</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="directiva-cards">
+      
+        <div class="dir-card">
+          <img src="oriana.webp" alt="Oriana Offermann P.">
+          <div class="dir-name">Oriana Offermann P.</div>
+          <div class="dir-role">Vicepresidente 1</div>
+        </div>
+
+        <div class="dir-card">
+          <img src="felipe.webp" alt="Felipe Salvo A.">
+          <div class="dir-name">Felipe Salvo A.</div>
+          <div class="dir-role">Vicepresidente 2</div>
+        </div>
+
+        <div class="dir-card">
+          <img src="claudio.webp" alt="Claudio Lapostol V.">
+          <div class="dir-name">Claudio Lapostol V.</div>
+          <div class="dir-role">Secretario</div>
+        </div>
+
+        <div class="dir-card">
+          <img src="minerva.webp" alt="Minerva Fernández C.">
+          <div class="dir-name">Minerva Fernández C.</div>
+          <div class="dir-role">Tesorera</div>
+        </div>
+    </div>
+    <div class="directiva-meta">
+      <p>Tus representantes en las elecciones internas · Partido Republicano · 9 de agosto de 2026 · Región del Biobío</p>
+      <span class="pill">Síguenos en Instagram · @republicanos_biobio</span>
+    </div>
+  </div>
+</section>
+
+<section id="ejes">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Propuesta</div>
+      <h2>Ocho Ejes de Trabajo</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="ejes-grid">
+      
+    <article class="eje">
+      <div class="eje-num">01</div>
+      <div class="eje-body">
+        <h3>Transparencia y Comunicación Permanente</h3>
+        <p class="eje-objetivo">Seremos una Directiva Regional que garantice el acceso oportuno y equitativo a la información partidaria para toda la militancia.</p>
+        <p class="eje-label">Propuestas</p>
+        <ul class="eje-list">
+          <li>Realización de reuniones informativas periódicas abiertas a militantes y dirigentes.</li>
+<li>Entrega mensual de información relevante mediante canales oficiales como WhatsApp, correo y plataformas digitales.</li>
+<li>Comunicación clara respecto de actividades, acuerdos y lineamientos regionales.</li>
+<li>Fortalecimiento de los canales institucionales para evitar la concentración de información en grupos reducidos.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="eje">
+      <div class="eje-num">02</div>
+      <div class="eje-body">
+        <h3>Participación Democrática y Fortalecimiento del Partido en la Región del Biobío</h3>
+        <p class="eje-objetivo">Creemos en un Partido donde las bases tengan real participación y las decisiones se construyan integrando a todos los militantes, independiente de dónde vivan.</p>
+        <p class="eje-label">Propuestas</p>
+        <ul class="eje-list">
+          <li>Promover elecciones democráticas en todas las directivas comunales, compuestas de un Presidente, Secretario y Tesorero.</li>
+<li>Generar instancias de consulta y diálogo con la militancia regional, con política de puertas abiertas.</li>
+<li>Facilitar la aparición y consolidación de nuevos liderazgos y de dirigentes.</li>
+<li>La Directiva Regional deberá crear las condiciones que permitan fomentar el trabajo colaborativo entre comunales y estructuras regionales.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="eje">
+      <div class="eje-num">03</div>
+      <div class="eje-body">
+        <h3>Presupuestación (PxQ) Bottom-Up</h3>
+        <p class="eje-objetivo">Las directivas Comunales estarán llamadas a planificar actividades sociales, de captación y formación, así como el uso de sedes comunales de ser posible, considerando los costos en un presupuesto.</p>
+        <p class="eje-label">Propuestas</p>
+        <ul class="eje-list">
+          <li>Las directivas comunales deberán presupuestar anualmente sus gastos considerando el PxQ (Precio por Cantidad) de cada actividad o adquisición.</li>
+<li>Los respectivos presupuestos serán defendidos ante la Directiva Regional, que una vez aprobado (o corregido) llevará el consolidado a la Tesorería Nacional del Partido Republicano.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="eje">
+      <div class="eje-num">04</div>
+      <div class="eje-body">
+        <h3>Fortalecimiento Territorial</h3>
+        <p class="eje-objetivo">Una Directiva Regional debe estar presente en las comunas, escuchando y apoyando el trabajo territorial.</p>
+        <p class="eje-label">Propuestas</p>
+        <ul class="eje-list">
+          <li>Desarrollo de un calendario anual de visitas comunales.</li>
+<li>Presencia activa de la directiva regional en actividades locales.</li>
+<li>Apoyo político y organizacional a dirigentes y equipos territoriales.</li>
+<li>Coordinación permanente entre las distintas comunas de la región.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="eje">
+      <div class="eje-num">05</div>
+      <div class="eje-body">
+        <h3>Unidad y Respeto Interno</h3>
+        <p class="eje-objetivo">El fortalecimiento del partido requiere una cultura interna cimentada en el respeto, la unidad y el compromiso con los principios republicanos.</p>
+        <p class="eje-label">Propuestas</p>
+        <ul class="eje-list">
+          <li>Promover relaciones internas basadas en el respeto y la colaboración.</li>
+<li>Velar por los intereses partidarios y colectivos por sobre proyectos personales.</li>
+<li>Impulsar espacios de encuentro y trabajo conjunto entre militantes.</li>
+<li>Fortalecer la identidad y sentido de pertenencia dentro del partido.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="eje">
+      <div class="eje-num">06</div>
+      <div class="eje-body">
+        <h3>Formación Política y Nuevos Liderazgos</h3>
+        <p class="eje-objetivo">El crecimiento del partido requiere militantes, dirigentes y servidores públicos preparados y comprometidos con los principios del Partido Republicano, los valores cristianos y el servicio público probo.</p>
+        <p class="eje-label">Propuestas</p>
+        <ul class="eje-list">
+          <li>Realización de escuelas de formación política y liderazgo.</li>
+<li>Capacitaciones en comunicación, campañas, vocería y trabajo territorial.</li>
+<li>Formación de equipos técnicos y de apoyo comunal.</li>
+<li>Generación de oportunidades para jóvenes y nuevos liderazgos.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="eje">
+      <div class="eje-num">07</div>
+      <div class="eje-body">
+        <h3>Vida Partidaria e Identidad Republicana</h3>
+        <p class="eje-objetivo">Creemos importante hacer camaradería interna y forjar un sentido de pertenencia partidaria.</p>
+        <p class="eje-label">Propuestas</p>
+        <ul class="eje-list">
+          <li>Consolidar actividades institucionales y conmemorativas.</li>
+<li>Celebración anual del aniversario del partido a nivel regional.</li>
+<li>Organización de encuentros de camaradería y trabajo político.</li>
+<li>Reconocimiento al compromiso y trayectoria de militantes y dirigentes.</li>
+<li>Empleo extensivo de los símbolos partidistas, como el himno del Partido Republicano y sus colores.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="eje">
+      <div class="eje-num">08</div>
+      <div class="eje-body">
+        <h3>Profesionalismo y Organización</h3>
+        <p class="eje-objetivo">Una conducción eficiente requiere orden, planificación y capacidad de respuesta frente a crisis.</p>
+        <p class="eje-label">Propuestas</p>
+        <ul class="eje-list">
+          <li>Elaboración de un calendario anual de actividades regionales.</li>
+<li>Mayor coordinación entre las estructuras regionales y comunales.</li>
+<li>Respuesta oportuna a requerimientos de militantes y dirigentes.</li>
+<li>Seguimiento y cumplimiento de compromisos adquiridos por la directiva.</li>
+        </ul>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+
+<section id="compromiso">
+  <div class="wrap">
+    <p class="lead">NUESTRO COMPROMISO</p>
+    <blockquote>Construir una Región políticamente <strong>Fortalecida, Unida y Preparada </strong>para enfrentar los desafíos futuros con Organización, Trabajo y Sentido de Comunidad</blockquote>
+  </div>
+</section>
+
+<section id="consejera">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Tus representantes</div>
+      <h2>Cabildo Regional</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="directiva-cards">
+      
+        <div class="dir-card">
+          <img src="pauli_cabildo.webp" alt="Paulina Ugalde J.">
+          <div class="dir-name">Paulina Ugalde J.</div>
+          <div class="dir-role">Consejera Regional</div>
+        </div>
+
+        <div class="dir-card">
+          <img src="claudio_pardo.webp" alt="Claudio Pardo S.">
+          <div class="dir-name">Claudio Pardo S.</div>
+          <div class="dir-role">Consejero Regional</div>
+        </div>
+
+        <div class="dir-card">
+          <img src="neftali.webp" alt="Neftalí Nahuelqueo Ll.">
+          <div class="dir-name">Neftalí Nahuelqueo Ll.</div>
+          <div class="dir-role">Consejero Regional</div>
+        </div>
+
+        <div class="dir-card">
+          <img src="jose.webp" alt="José Caballero G.">
+          <div class="dir-name">José Caballero G.</div>
+          <div class="dir-role">Consejero Regional</div>
+        </div>
+    </div>
+    <div class="directiva-meta">
+      <p>Candidatos al Cabildo Regional del Biobío · Partido Republicano · 9 de agosto de 2026 · Región del Biobío</p>
+    </div>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Trabajamos Unidos</div>
+      <h2>Hacemos Equipo</h2>
+      <div class="rule"></div>
+    </div>
+    <img src="equipo.webp" alt="Equipo Cabildo Regional Lista Contigo Biobío">
+    <p class="caption">Candidatos al Cabildo Regional del Biobío, junto a la Directiva Regional de la Lista Contigo Biobío! Lista 2</p>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Súmate</div>
+      <h2>Contacto</h2>
+      <p>Déjanos tus datos si quieres apoyar como voluntario/a, apoderado/a o sumarte al trabajo territorial.</p>
+    </div>
+    <form class="contact-grid" id="contactForm">
+      <div class="full">
+        <label for="nombre">Nombre completo *</label>
+        <input type="text" id="nombre" required placeholder="Tu nombre">
+      </div>
+      <div>
+        <label for="comuna">Comuna</label>
+        <input type="text" id="comuna" placeholder="Tu comuna">
+      </div>
+      <div>
+        <label for="telefono">Teléfono *</label>
+        <input type="tel" id="telefono" required placeholder="+56 9 ...">
+      </div>
+      <div class="full">
+        <label for="correo">Correo *</label>
+        <input type="email" id="correo" required placeholder="tucorreo@ejemplo.cl">
+      </div>
+      <div class="full">
+        <label for="interes">Me interesa</label>
+        <select id="interes">
+          <option>Voluntario/a o apoderado/a</option>
+          <option>Participación de la Juventud</option>
+          <option>Mesas de trabajo</option>
+          <option>Consultas generales</option>
+        </select>
+      </div>
+      <div class="full">
+        <label for="mensaje">Mensaje *</label>
+        <textarea id="mensaje" required placeholder="Cuéntanos en qué te gustaría participar"></textarea>
+      </div>
+      <div class="full">
+        <button type="submit" class="btn-submit">Enviar</button>
+      </div>
+    </form>
+    <div class="contact-alt">
+      <a href="https://instagram.com/republicanos_biobio" target="_blank" rel="noopener">Instagram · @republicanos_biobio</a>
+      <a href="mailto:paulinaugaldej@gmail.com">Escríbenos por correo</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="foot-logo" src="logo_pr_blanco.svg" alt="Partido Republicano de Chile">
+    <div>PARTIDO REPUBLICANO DE CHILE</div>
+    <div class="comunas">Concepción · Arauco · Biobío</div>
+    <span class="pill">Elecciones internas 9 de agosto 2026</span>
+    <div class="fine">Lista Contigo Biobío! — Sitio no oficial de campaña, uso interno de la lista.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var nombre = document.getElementById('nombre').value;
+  var comuna = document.getElementById('comuna').value;
+  var telefono = document.getElementById('telefono').value;
+  var correo = document.getElementById('correo').value;
+  var interes = document.getElementById('interes').value;
+  var mensaje = document.getElementById('mensaje').value;
+  var body = "Nombre: " + nombre + "%0D%0AComuna: " + comuna + "%0D%0ATeléfono: " + telefono + "%0D%0ACorreo: " + correo + "%0D%0AInterés: " + interes + "%0D%0AMensaje: " + mensaje;
+  window.location.href = "mailto:paulinaugaldej@gmail.com?subject=Contacto%20Lista%20Contigo%20Biob%C3%ADo&body=" + body;
+});
+</script>
+
+</body>
+</html>
